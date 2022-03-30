@@ -1,26 +1,9 @@
 <div class="card-container">
-  <div class="job-card">
-    <span>2d ago - Part time</span>
-    <h2>Senior Software Engineer</h2>
-    <span>Lumiplan</span>
-    <h3>Russia</h3>
+  <div *ngFor="let job of jobList" class="job-card">
+    <span>{{job.postedAt}} - {{job.contract}}</span>
+    <h2>{{job.position}}</h2>
+    <span>{{job.company}}</span>
+    <h3>{{job.location}}</h3>
   </div>
-  <div class="job-card">
-    <span>2d ago - Part time</span>
-    <h2>Senior Software Engineer</h2>
-    <span>Lumiplan</span>
-    <h3>Russia</h3>
-  </div>
-  <div class="job-card">
-    <span>2d ago - Part time</span>
-    <h2>Senior Software Engineer</h2>
-    <span>Lumiplan</span>
-    <h3>Russia</h3>
-  </div>
-  <div class="job-card">
-    <span>2d ago - Part time</span>
-    <h2>Senior Software Engineer</h2>
-    <span>Lumiplan</span>
-    <h3>Russia</h3>
-  </div>
+
 </div>

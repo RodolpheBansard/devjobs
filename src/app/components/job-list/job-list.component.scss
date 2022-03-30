@@ -1,9 +1,13 @@
 .card-container{
   margin: 0 auto;
   max-width: 1200px;
-
+  display: grid;
+  grid-template-columns: repeat(auto-fill,350px);
+  justify-content: center;
+  grid-gap: 16px;
 }
 
 .job-card{
   background: white;
+  padding: 1.5rem;
 }
