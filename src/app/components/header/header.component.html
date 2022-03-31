@@ -1,6 +1,12 @@
 <div class="image-header">
   <div class="header-content">
     <h1>devjobs</h1>
-    <h1>darkmode</h1>
+    <div class="dark-mode-container">
+      <img src="assets/images/desktop/icon-sun.svg">
+      <div (click)="toggleDarkMode()" class="dark-mode-slider">
+        <div [ngClass]="{'active' : isDarkMode}" class="slider-circle"></div>
+      </div>
+      <img src="assets/images/desktop/icon-moon.svg">
+    </div>
   </div>
 </div>

@@ -1,1 +1,41 @@
-<p>job-details works!</p>
+<div class="company-card">
+  <div class="company-info">
+    <div [ngStyle]="getCompanyLogo()" class="company-image"></div>
+    <div class="company-name-and-website">
+      <h2>{{jobSelected.company}}</h2>
+      <span>{{jobSelected.website}}</span>
+    </div>
+  </div>
+  <button>Company Site</button>
+</div>
+
+<div class="job-container">
+  <div class="job-header">
+    <div class="job-info">
+      <span class="infos">{{jobSelected.postedAt}} - {{jobSelected.contract}}</span>
+      <h1>{{jobSelected.position}}</h1>
+      <span class="job-country">{{jobSelected.location}}</span>
+    </div>
+    <button>Apply Now</button>
+  </div>
+
+  <p>{{jobSelected.description}}</p>
+
+  <h2>Requirement</h2>
+
+  <p>{{jobSelected.requirements.content}}</p>
+
+  <ul>
+    <li *ngFor="let item of jobSelected.requirements.items">{{item}}</li>
+  </ul>
+
+  <h2>What you will do</h2>
+
+  <p>{{jobSelected.role.content}}</p>
+
+  <div class="role-items">
+    <span *ngFor="let item of jobSelected.role.items;let index=index"><span class="role-index">{{index}}</span>{{item}}</span>
+  </div>
+
+
+</div>
