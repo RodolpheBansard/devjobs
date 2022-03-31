@@ -1,5 +1,32 @@
+<div class="search-container">
+  <div class="search-sub-container search-title-container">
+    <img src="assets/images/desktop/icon-search.svg">
+    <input placeholder="Filter by title...">
+  </div>
+
+  <div class="search-container-separator"></div>
+
+  <div class="search-sub-container search-location-container">
+    <img src="assets/images/desktop/icon-location.svg">
+    <input placeholder="Filter by location...">
+  </div>
+
+  <div class="search-container-separator"></div>
+
+  <div class="search-sub-container search-actions-container">
+    <div [ngClass]="{'active' : isFullTimeSelected}" (click)="toggleIsFullTime()" class="checkbox-container">
+      <img [ngClass]="{'active' : isFullTimeSelected}" class="checkbox-image" src="assets/images/desktop/icon-check.svg">
+    </div>
+    <span>Full Time only</span>
+    <button class="primary-button">Search</button>
+  </div>
+
+
+</div>
+
 <div class="card-container">
   <div *ngFor="let job of jobList" class="job-card">
+    <div [ngStyle]="getCompanyLogo(job)" class="job-card-image"></div>
     <span>{{job.postedAt}} - {{job.contract}}</span>
     <h2>{{job.position}}</h2>
     <span>{{job.company}}</span>

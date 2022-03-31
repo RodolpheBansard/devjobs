@@ -10,6 +10,7 @@ import {Job} from "../../model/job";
 export class JobListComponent implements OnInit {
 
   public jobList : Job[] = [];
+  public isFullTimeSelected = false;
 
   constructor() { }
 
@@ -17,4 +18,16 @@ export class JobListComponent implements OnInit {
     this.jobList = jobs;
   }
 
+
+  public getCompanyLogo(job: Job): {"background-color": string}{
+    let style = {
+      'background-color' : job.logoBackground,
+      'background-image' : 'url(' + job.logo +')',
+    };
+    return style;
+  }
+
+  toggleIsFullTime(){
+    this.isFullTimeSelected = ! this.isFullTimeSelected;
+  }
 }
